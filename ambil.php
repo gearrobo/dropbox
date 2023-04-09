@@ -31,86 +31,51 @@ if(isset($_POST['addplant'])){
 
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Informasi Tanaman</h1>
+    <h1 class="h3 mb-0 text-gray-800">Pengambilan Dokumen</h1>
 </div>
-
+<div class="row mb-5"></div>
+<div class="row mb-5"></div>
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Tabel Tanaman</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Informasi Dokumen</h6>
     </div>
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th width="200px">Nama</th>
-                        <th>Deskripsi</th>
-                        <th width="120px">Tanggal Masuk</th>
-                        <th class="text-center"><a href="#" class="btn btn-primary" data-toggle="modal" data-target="#tambahuser"><i class="fas fa-laptop-code"></i> Tambah</a></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                        $plants = query("SELECT * FROM plants order by 'id' asc ");
-                        foreach ($plants as $plant) :
-                    ?>
-                    <tr>
-                        <td><?= $plant['name']; ?></td>
-                        <td><?= $plant['description']; ?></td>
-                        <td class="text-center"><?= $plant['created_at']; ?></td>
-                        <td class="text-center"><button type="button" class="btn btn-success">Edit</button>
-                        <button type="button" class="btn btn-danger">Hapus</button></td>
-                    </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
+    <div class="card-body form">
+      <form action="" method="post" role="form">
+        <div class="form-group">
+            <div class="row">
+              <label class="col-sm-3 control-label text-right">Name <span class="text-red">*</span></label>         
+              <div class="col-sm-8"><input type="text" class="form-control" name="name" placeholder="Nama Penerima" value=""></div>
+          </div>
         </div>
-    </div>
-</div>
+        <div class="form-group">
+            <div class="row">
+              <label class="col-sm-3 control-label text-right">NIP <span class="text-red">*</span></label>         
+              <div class="col-sm-8"><input type="text" class="form-control" name="nip" placeholder="No Induk Pegawai" value=""></div>
+          </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+              <label class="col-sm-3 control-label text-right">Token <span class="text-red">*</span></label>         
+              <div class="col-sm-8"><input type="text" class="form-control" name="token" placeholder="Token" value=""></div>
+          </div>
+        </div>
 
+        <button type="submit" class="btn btn-primary btn-user btn-block" name="addplant" value="add">Simpan</button>
+      </form>
+    </div>
 </div>
 <!-- /.container-fluid -->
 
-<!-- modal insert -->
-<div class="example-modal">
-  <div id="tambahuser" class="modal fade" role="dialog" style="display:none;">
-    <div class="modal-dialog"> 
-      <div class="modal-content">
-        <div class="modal-header">
-            <h3 class="modal-title">Tambah Tanaman Baru</h3>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        </div>
-        <div class="modal-body">
-          <form action="" method="post" role="form">
-            <div class="form-group">
-              <div class="row">
-              <label class="col-sm-3 control-label text-right">Name <span class="text-red">*</span></label>         
-              <div class="col-sm-8"><input type="text" class="form-control" name="name" placeholder="Nama Tanaman" value=""></div>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="row">
-              <label class="col-sm-3 control-label text-right">Deskripsi <span class="text-red">*</span></label>
-              <div class="col-sm-8"><input type="text" class="form-control" name="description" placeholder="Deskripsi" value=""></div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="submit" class="btn btn-primary btn-user btn-block" name="addplant" value="add">Simpan</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div><!-- modal insert close -->
-
+<div class="row mb-5"></div>
+<div class="row mb-5"></div>
+<div class="row mb-5"></div>
 
 <?php include 'footer.php'; ?>
 
-<script>
-// Call the dataTables jQuery plugin
-$(document).ready(function() {
-  $('#dataTable').DataTable();
-});
+<script type="text/javascript">
+function alertmsg(){
+    alert("You pressed the keyboard inside the document!")
+}
+document.onkeypress=alertmsg
 </script>
