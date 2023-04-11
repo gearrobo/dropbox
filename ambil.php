@@ -44,18 +44,6 @@ if(isset($_POST['addplant'])){
       <form action="" method="post" role="form">
         <div class="form-group">
             <div class="row">
-              <label class="col-sm-3 control-label text-right">Name <span class="text-red">*</span></label>         
-              <div class="col-sm-8"><input type="text" class="form-control" name="name" placeholder="Nama Penerima" value=""></div>
-          </div>
-        </div>
-        <div class="form-group">
-            <div class="row">
-              <label class="col-sm-3 control-label text-right">NIP <span class="text-red">*</span></label>         
-              <div class="col-sm-8"><input type="text" class="form-control" name="nip" placeholder="No Induk Pegawai" value=""></div>
-          </div>
-        </div>
-        <div class="form-group">
-            <div class="row">
               <label class="col-sm-3 control-label text-right">Token <span class="text-red">*</span></label>         
               <div class="col-sm-8"><input type="text" class="form-control" name="token" placeholder="Token" value=""></div>
           </div>
