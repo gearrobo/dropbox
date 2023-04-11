@@ -6,4 +6,6 @@ if (!$fp) {
    echo "Not open";
 } else {
    echo "Open";
+   fwrite($fp, "1");
+    fclose($fp);
 }
