@@ -1,10 +1,13 @@
 <?php
 include 'conn.php';
 
+if(isset($_POST['caritoken'])){
+   $token = $_POST['token'];
+}
 $com = "COM3";
 $room = 1 ;
 
-$carikamar = query("SELECT * FROM dokumen WHERE token = 1234 ");
+$carikamar = query("SELECT * FROM dokumen WHERE '$token' = 1234 ");
 foreach ($carikamar as $kamar) {
    // echo $kamar['room'];
    $room = $kamar['room'];
@@ -23,4 +26,5 @@ if (!$fp) {
    // echo "Open";
 }
 
+header('location:index.php');
 ?>
