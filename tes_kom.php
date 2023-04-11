@@ -1,7 +1,8 @@
 <?php
 
 $verz="1.0";
-$comPort = "/dev/ttyACM0"; /*change to correct com port */
+exec("mode COM3 BAUD=9600 PARITY=N data=8 stop=1 xon=off");
+$comPort = "COM3"; /*change to correct com port */
 
 ?>
 
