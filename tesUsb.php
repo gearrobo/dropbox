@@ -1,14 +1,26 @@
 <?php
-exec("mode COM3 BAUD=9600 PARITY=N data=8 stop=1 xon=off");
+include 'conn.php';
 
-$fp = fopen ("COM3", "w");
+$com = "COM3";
+$room = 1 ;
+
+$carikamar = query("SELECT * FROM dokumen WHERE token = 1234 ");
+foreach ($carikamar as $kamar) {
+   // echo $kamar['room'];
+   $room = $kamar['room'];
+}
+
+exec("mode ".$com." BAUD=9600 PARITY=N data=8 stop=1 xon=off");
+
+
+$fp = fopen ($com, "w");
 fwrite($fp, "\r");
-fwrite($fp, "buka4\n");
+fwrite($fp, "buka".$room."\n");
 fclose($fp);
 if (!$fp) {
-   echo "Not open";
+   // echo "Not open";
 } else {
-   echo "Open";
+   // echo "Open";
 }
 
 ?>
