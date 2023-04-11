@@ -170,9 +170,11 @@ if(isset($_GET['id_pompa'])){
                     <div class="row align-items-center">
                         <!-- Informasi Pompa Air -->
                         <div class="col-xl-12 col-md-8 mb-2">
-                            <div id="card" class="card ">
-                                <button type="button" class="btn-lg btn-success">Simpan Dokumen <i class="fas fa-file-download"></i></button>
-                            </div>
+                            <form action="simpan.php" method="get">
+                                <div id="card" class="card ">
+                                    <button type="submit" class="btn-lg btn-success">Simpan Dokumen <i class="fas fa-file-download"></i></button>
+                                </div>
+                            </form>
                         </div> 
                     </div>
                 </div>
@@ -184,5 +186,9 @@ if(isset($_GET['id_pompa'])){
 
 </div>
 <!-- /.container-fluid -->
-
+<div class="row mb-5"></div>
+<div class="row mb-5"></div>
+<div class="row mb-5"></div>
+<div class="row mb-5"></div>
+<div class="row mb-5"></div>
 <?php include 'footer.php'; ?>
