@@ -39,18 +39,12 @@ if(isset($_POST['caritoken'])){
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Informasi Dokumen</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Silahkan Ambil Dokumen Mohon Periksa Kembali</h6>
     </div>
     <div class="card-body form">
-      <form action="tesusb.php" method="post" role="form">
-        <div class="form-group">
-            <div class="row">
-              <label class="col-sm-3 control-label text-right">Token <span class="text-red">*</span></label>         
-              <div class="col-sm-8"><input type="text" class="form-control" name="token" placeholder="Token" value=""></div>
-          </div>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-user btn-block" name="caritoken" value="add">Ambil</button>
+      <form action="index.php" method="post" role="form">
+        
+        <button type="submit" class="btn btn-primary btn-user btn-block" name="caritoken" value="add">Selesai Transaksi</button>
       </form>
     </div>
 </div>

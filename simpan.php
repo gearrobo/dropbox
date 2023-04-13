@@ -31,21 +31,21 @@ if(isset($_POST['addplant'])){
 
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Pengambilan Dokumen</h1>
+    <h1 class="h3 mb-0 text-gray-800">Simpan Dokumen</h1>
 </div>
 <div class="row mb-5"></div>
 <div class="row mb-5"></div>
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Informasi Dokumen</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Informasi Penerima Dokumen</h6>
     </div>
     <div class="card-body form">
       <form action="" method="post" role="form">
         <div class="form-group">
             <div class="row">
               <label class="col-sm-3 control-label text-right">Nama Pengirim <span class="text-red">*</span></label>         
-              <div class="col-sm-8"><input type="text" class="form-control" name="name" placeholder="Nama Penerima" value=""></div>
+              <div class="col-sm-8"><input type="text" class="form-control" name="sender" placeholder="Nama Penerima" value=""></div>
           </div>
         </div>
         <div class="form-group">
@@ -57,7 +57,7 @@ if(isset($_POST['addplant'])){
         <div class="form-group">
             <div class="row">
               <label class="col-sm-3 control-label text-right">Nama Penerima <span class="text-red">*</span></label>         
-              <div class="col-sm-8"><input type="text" class="form-control" name="token" placeholder="Token" value=""></div>
+              <div class="col-sm-8"><input type="text" class="form-control" name="reciepent" placeholder="Nama Penerima" value=""></div>
           </div>
         </div>
         <div class="form-group">
