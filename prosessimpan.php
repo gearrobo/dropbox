@@ -59,6 +59,7 @@ if(isset($_POST['simpan'])){
                  Data Tanaman Berhasil di Tambah!
              </div>
          ';
+         header('location:jedasimpan.php');
      }else{
          echo "ERROR, tidak berhasil". mysqli_error($conn);
      }
