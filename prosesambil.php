@@ -65,13 +65,13 @@ try {
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'gearroboone@gmail.com';                     //SMTP username
+    $mail->Username   = '@gmail.com';                     //SMTP username
     $mail->Password   = 'jyylgvenvthnvkqt';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('gearroboone@gmail.com', 'Mailer');
+    $mail->setFrom('@gmail.com', 'Mailer');
    //  $mail->addAddress('budisantosokavling@gmail.com', 'Joe User');     //Add a recipient
     $mail->addAddress('androexe5@gmail.com', 'Resky');     //Add a recipient
     //$mail->addAddress('ellen@example.com');               //Name is optional
