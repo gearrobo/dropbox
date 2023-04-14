@@ -24,7 +24,7 @@ if(isset($_POST['caritoken'])){
         <h6 class="m-0 font-weight-bold text-primary">Informasi Dokumen</h6>
     </div>
     <div class="card-body form">
-      <form action="tesUsb.php" method="post" role="form">
+      <form action="prosesambil.php" method="post" role="form">
         <div class="form-group">
             <div class="row">
               <label class="col-sm-3 control-label text-right">Token <span class="text-red">*</span></label>         

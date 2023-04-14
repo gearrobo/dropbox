@@ -66,11 +66,12 @@ if(isset($_GET['id_pompa'])){
                         <div class="col mr-1">
                             <div class="text-s text-primary text-uppercase mb-1">
                                 Kapasitas Ruang</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">50</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">40</div>
                         </div>
                         <div class="col-auto">
                             <!-- <i class="fas fa-calendar fa-2x text-gray-300"></i> -->
-                            <i class="fas fa-leaf fa-3x text-gray-300"></i>
+                            <!-- <i class="fas fa-leaf fa-3x text-gray-300"></i> -->
+                            <i class="fab fa-intercom fa-3x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -88,8 +89,7 @@ if(isset($_GET['id_pompa'])){
                             <div class="h5 mb-0 font-weight-bold text-gray-800">20</div>
                         </div>
                         <div class="col-auto">
-                            <!-- <i class="fas fa-dollar-sign fa-2x text-gray-300"></i> -->
-                            <i class="fas fa-tint fa-3x text-gray-300"></i>
+                            <i class="fas fa-calendar fa-3x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -111,8 +111,7 @@ if(isset($_GET['id_pompa'])){
                             </div>
                         </div>
                         <div class="col-auto">
-                            <!-- <i class="fas fa-clipboard-list fa-2x text-gray-300"></i> -->
-                            <i class="far fa-sun fa-3x text-gray-300"></i>
+                            <i class="fas fa-clipboard-list fa-3x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -130,8 +129,7 @@ if(isset($_GET['id_pompa'])){
                             <div class="h5 mb-0 font-weight-bold text-gray-800">25</div>
                         </div>
                         <div class="col-auto">
-                            <!-- <i class="fas fa-comments fa-2x text-gray-300"></i> -->
-                            <i class="fas fa-temperature-high fa-3x text-gray-300"></i>
+                            <i class="fab fa-buromobelexperte fa-3x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
