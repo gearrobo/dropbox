@@ -1,5 +1,7 @@
 <?php
 include 'conn.php';
+date_default_timezone_set('Asia/Jakarta');
+$wktu = date('Y-m-d  H:i:s');
 
 if(isset($_POST['caritoken'])){
    $token = $_POST['token'];
@@ -7,11 +9,31 @@ if(isset($_POST['caritoken'])){
 $com = "COM3";
 $room = 1 ;
 
-$carikamar = query("SELECT * FROM docu WHERE '$token' = 1234 ");
+$carikamar = query("SELECT * FROM docu WHERE token = '$token' ");
 foreach ($carikamar as $kamar) {
-   // echo $kamar['room'];
+   echo $kamar['room'];
    $room = $kamar['room'];
 }
+
+$sql = " UPDATE docu SET sender = 'a',
+   no_tlp = 'a',
+   jenis = 'a',
+   recipient = 'a',
+   token = 'a',
+   email = 'a',
+   status = '0',
+   updated_at = '".$wktu."'  WHERE room = '".$room."' ";
+   
+
+    if(mysqli_query($conn,$sql)){
+      echo '
+      <div class="alert alert-warning" role="alert">
+      Data Berhasil di Ubah!
+      </div>
+      ';
+    }else{
+      echo "ERROR, tidak berhasil". mysqli_error($conn);
+    }
 
 // exec("mode ".$com." BAUD=9600 PARITY=N data=8 stop=1 xon=off");
 

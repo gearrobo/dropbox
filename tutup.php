@@ -32,17 +32,17 @@ if(isset($_POST['caritoken'])){
 
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Pengambilan Dokumen</h1>
+    <h1 class="h3 mb-0 text-gray-800">Pengambilan / Peletakan Dokumen</h1>
 </div>
 <div class="row mb-5"></div>
 <div class="row mb-5"></div>
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Silahkan Ambil Dokumen Mohon Periksa Kembali</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Silahkan Ambil / Letakan Dokumen Mohon Periksa Kembali</h6>
     </div>
     <div class="card-body form">
-      <form action="index.php" method="post" role="form">
+      <form action="aksi.php" method="post" role="form">
         
         <button type="submit" class="btn btn-primary btn-user btn-block" name="caritoken" value="add">Selesai Transaksi</button>
       </form>

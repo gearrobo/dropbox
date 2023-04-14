@@ -4,26 +4,8 @@
 date_default_timezone_set('Asia/Jakarta');
 
 if(isset($_POST['caritoken'])){
+    $wktu = date('Y-m-d  H:i:s');
     print_r($_POST['token']);
-//    $name = $_POST['name'];
-//    $description = $_POST['description'];
-//    $api_key = $_POST['api_key'];
-//    $status = "Baik";
-//    $value = 39.90;
-//    $wktu = date('Y-m-d  H:i:s');
-
-//     //query
-//     $sql = "INSERT INTO plants (name, description, api_key, value, status, created_at) VALUES ('$name','$description','$api_key','$value','$status','$wktu') ";
-
-//     if(mysqli_query($conn,$sql)){
-//         echo '
-//             <div class="alert alert-success" role="alert">
-//                 Data Tanaman Berhasil di Tambah!
-//             </div>
-//         ';
-//     }else{
-//         echo "ERROR, tidak berhasil". mysqli_error($conn);
-//     }
 }
 ?>
 
@@ -42,7 +24,7 @@ if(isset($_POST['caritoken'])){
         <h6 class="m-0 font-weight-bold text-primary">Informasi Dokumen</h6>
     </div>
     <div class="card-body form">
-      <form action="tesusb.php" method="post" role="form">
+      <form action="tesUsb.php" method="post" role="form">
         <div class="form-group">
             <div class="row">
               <label class="col-sm-3 control-label text-right">Token <span class="text-red">*</span></label>         
