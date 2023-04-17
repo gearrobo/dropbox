@@ -4,19 +4,6 @@ date_default_timezone_set('Asia/Jakarta');
 exec("mode COM4 BAUD=9600 PARITY=N data=8 stop=1 xon=off");
 
 
-<<<<<<< HEAD
-// $fp = fopen ("com4", "w");
-// fwrite($fp, "\r");
-// fwrite($fp, "buka".$room."\n");
-// fclose($fp);
-// if (!$fp) {
-//    // echo "Not open";
-// } else {
-//    // echo "Open";
-// }
-=======
-
->>>>>>> 624d872f3d3043bfd3466cc4479683595aa55812
 
 if(isset($_POST['simpan'])){
     $wktu = date('Y-m-d  H:i:s');
