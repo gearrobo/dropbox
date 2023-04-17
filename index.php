@@ -66,16 +66,16 @@ $sum_docs_in = mysqli_num_rows($sql_in);
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-s font-weight-bold text-info text-uppercase mb-1">Dokumen Keluar /hari
+                            <div class="text-s font-weight-bold text-info text-uppercase mb-1">Suhu Dropbox
                             </div>
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
-                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">5</div>
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">25&deg; C</div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-clipboard-list fa-3x text-gray-300"></i>
+                            <i class="fas fa-temperature-high fa-3x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
