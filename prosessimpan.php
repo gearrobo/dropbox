@@ -1,18 +1,18 @@
 <?php
 include 'conn.php';
 date_default_timezone_set('Asia/Jakarta');
-// exec("mode ".$com." BAUD=9600 PARITY=N data=8 stop=1 xon=off");
+exec("mode COM4 BAUD=9600 PARITY=N data=8 stop=1 xon=off");
 
 
-// $fp = fopen ($com, "w");
-// fwrite($fp, "\r");
-// fwrite($fp, "buka".$room."\n");
-// fclose($fp);
-// if (!$fp) {
-//    // echo "Not open";
-// } else {
-//    // echo "Open";
-// }
+$fp = fopen ("com4", "w");
+fwrite($fp, "\r");
+fwrite($fp, "buka".$room."\n");
+fclose($fp);
+if (!$fp) {
+   // echo "Not open";
+} else {
+   // echo "Open";
+}
 
 if(isset($_POST['simpan'])){
     $wktu = date('Y-m-d  H:i:s');
