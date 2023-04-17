@@ -51,7 +51,7 @@ if (!$fp) {
 
 
 $apiToken = "5065160162:AAEVWCHA-TEiqZq7eKQagiTy5pa-Op-myVI";
-$string = '<b>bold</b>, <strong>bold</strong>';
+$string = 'Dokumen Anda dengan Token '.$token.' telah diambil';
 $data = [
    'chat_id' => '1201127925',
    'text' => $string
