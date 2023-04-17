@@ -9,6 +9,7 @@ if(isset($_POST['caritoken'])){
 $com = "COM3";
 $room = 1 ;
 
+
 $carikamar = query("SELECT * FROM docu WHERE token = '$token' ");
 foreach ($carikamar as $kamar) {
    echo $kamar['room'];
