@@ -4,15 +4,15 @@ date_default_timezone_set('Asia/Jakarta');
 exec("mode COM4 BAUD=9600 PARITY=N data=8 stop=1 xon=off");
 
 
-$fp = fopen ("com4", "w");
-fwrite($fp, "\r");
-fwrite($fp, "buka".$room."\n");
-fclose($fp);
-if (!$fp) {
-   // echo "Not open";
-} else {
-   // echo "Open";
-}
+// $fp = fopen ("com4", "w");
+// fwrite($fp, "\r");
+// fwrite($fp, "buka".$room."\n");
+// fclose($fp);
+// if (!$fp) {
+//    // echo "Not open";
+// } else {
+//    // echo "Open";
+// }
 
 if(isset($_POST['simpan'])){
     $wktu = date('Y-m-d  H:i:s');
@@ -22,6 +22,7 @@ if(isset($_POST['simpan'])){
     $jenis = $_POST['jenis'];
     $email = $_POST['email'];
     $status = 1;
+    $chat_id = $_POST['chat_id'];
     $token = bin2hex(random_bytes(3));
 
     $sum_doc_in = $sum_doc_in + 1;
@@ -40,6 +41,7 @@ if(isset($_POST['simpan'])){
     token = '".$token."',
     email = '".$email."',
     status = '".$status."',
+    chat_id = '".$chat_id."',
     updated_at = '".$wktu."'  WHERE room = '".$room."' ";
     
  
@@ -53,7 +55,7 @@ if(isset($_POST['simpan'])){
        echo "ERROR, tidak berhasil". mysqli_error($conn);
      }
  
-    $sql = "INSERT INTO log_docu (sender, no_tlp, jenis, recipient, room, token, email, created_at) VALUES ('$sender','$no_tlp','$jenis','$recipient','$room','$token','$email','$wktu') ";
+    $sql = "INSERT INTO log_docu (sender, no_tlp, jenis, recipient, room, token, email, chat_id, created_at) VALUES ('$sender','$no_tlp','$jenis','$recipient','$room','$token','$email','$chat_id','$wktu') ";
  
      if(mysqli_query($conn,$sql)){
          echo '
@@ -62,9 +64,9 @@ if(isset($_POST['simpan'])){
              </div>
          ';
          $apiToken = "5065160162:AAEVWCHA-TEiqZq7eKQagiTy5pa-Op-myVI";
-$string = 'Dokumen Tersimpan dengan Token '.$token;
+$string = 'Selamat Datang, Dokumen Anda Telah Tersimpan dengan Token '.$token .'Terima Kasih';
 $data = [
-   'chat_id' => '1201127925',
+   'chat_id' => $chat_id,
    'text' => $string
 ];
 $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" .

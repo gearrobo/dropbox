@@ -88,7 +88,12 @@ if(isset($_POST['simpan'])){
               <div class="col-sm-8"><input type="text" class="form-control" name="email" placeholder="Email" value=""></div>
           </div>
         </div>
-
+        <div class="form-group">
+            <div class="row">
+              <label class="col-sm-3 control-label text-right">Chat Id Telegram <span class="text-red">*</span></label>         
+              <div class="col-sm-8"><input type="text" class="form-control" name="chat_id" placeholder="Chat Id" value=""></div>
+          </div>
+        </div>
         <button type="submit" class="btn btn-primary btn-user btn-block" name="simpan" >Simpan</button>
       </form>
     </div>
