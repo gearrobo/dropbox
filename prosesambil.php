@@ -36,10 +36,10 @@ $sql = " UPDATE docu SET sender = 'a',
       echo "ERROR, tidak berhasil". mysqli_error($conn);
     }
 
-exec("mode COM4 BAUD=9600 PARITY=N data=8 stop=1 xon=off");
+exec("mode COM3 BAUD=9600 PARITY=N data=8 stop=1 xon=off");
 
 
-$fp = fopen ("com4", "w");
+$fp = fopen ("com3", "w");
 sleep(2);
 fwrite($fp, "\r");
 fwrite($fp, "buka".$room."\n");
