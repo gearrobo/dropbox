@@ -23,6 +23,8 @@ if(isset($_POST['simpan'])){
     $email = $_POST['email'];
     $status = 1;
     $token = bin2hex(random_bytes(3));
+
+    $sum_doc_in = $sum_doc_in + 1;
  
  
     $ceks = query("SELECT * FROM docu WHERE status = '0' limit 1");

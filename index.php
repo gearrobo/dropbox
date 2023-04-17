@@ -13,50 +13,14 @@
 <?php 
 date_default_timezone_set('Asia/Jakarta');
 $wktu = date('Y-m-d  H:i:s');
+$docs = ("SELECT * FROM docu WHERE status = '0' ");
+$sql = mysqli_query($conn,$docs);
+$sum_docs = mysqli_num_rows($sql);
+$sum_docs = $sum_docs - 10;
 
-if(isset($_GET['id_lampu'])){
-    $id = $_GET['id_lampu'];
-    $value_lampu = $_GET['value'];
-
-    if($value_lampu == 1){ $value = 0;}
-    if($value_lampu == 0){ $value = 1;}
-
-    // echo $id;
-    // echo "<br>";
-    // echo $value_lampu;
-    // echo "<br>";
-    // echo $value;
-
-    $sql = " UPDATE sensors SET value = '$value' , updated_at = '$wktu' WHERE id = '".$id."' ";
-   if(mysqli_query($conn,$sql)){
-    //   echo "Berhasil";
-   }else{
-    //   echo "gagal";
-   }
-}
-
-if(isset($_GET['id_pompa'])){
-    $id = $_GET['id_pompa'];
-    $valus_pompa = $_GET['value'];
-
-    if($valus_pompa == 1){ $value = 0;}
-    if($valus_pompa == 0){ $value = 1;}
-
-    // echo $id;
-    // echo "<br>";
-    // echo $valus_pompa;
-    // echo "<br>";
-    // echo $value;
-
-    $sql = " UPDATE sensors SET value = '$value' , updated_at = '$wktu' WHERE id = '".$id."' ";
-   if(mysqli_query($conn,$sql)){
-    //   echo "Berhasil";
-   }else{
-    //   echo "gagal";
-   }
-}
-
-
+$docs_in = ("SELECT * FROM docu WHERE status = '1' ");
+$sql_in = mysqli_query($conn,$docs_in);
+$sum_docs_in = mysqli_num_rows($sql_in);
 ?>
         <!-- Earnings (Monthly) Card Example -->
         <div class="col-xl-3 col-md-6 mb-4">
@@ -86,7 +50,7 @@ if(isset($_GET['id_pompa'])){
                         <div class="col mr-2">
                             <div class="text-s font-weight-bold text-success text-uppercase mb-1">
                                 Dokumen Masuk</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">20</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $sum_docs_in; ?></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-calendar fa-3x text-gray-300"></i>
@@ -102,7 +66,7 @@ if(isset($_GET['id_pompa'])){
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-s font-weight-bold text-info text-uppercase mb-1">Dokumen Keluar
+                            <div class="text-s font-weight-bold text-info text-uppercase mb-1">Dokumen Keluar /hari
                             </div>
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
@@ -126,7 +90,7 @@ if(isset($_GET['id_pompa'])){
                         <div class="col mr-2">
                             <div class="text-s font-weight-bold text-warning text-uppercase mb-1">
                                 Ruang Tersedia</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">25</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $sum_docs; ?></div>
                         </div>
                         <div class="col-auto">
                             <i class="fab fa-buromobelexperte fa-3x text-gray-300"></i>

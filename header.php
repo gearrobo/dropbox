@@ -22,6 +22,7 @@
     $pengaturanlist = [
         'sensor'
     ];
+
 ?>
 
 <!DOCTYPE html>

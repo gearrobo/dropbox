@@ -27,4 +27,5 @@ function query($query){
     
 }
 
+$sum_doc_in;
 ?>
