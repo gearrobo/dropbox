@@ -151,6 +151,4 @@ $sum_docs_in = mysqli_num_rows($sql_in);
 <div class="row mb-5"></div>
 <div class="row mb-5"></div>
 <div class="row mb-5"></div>
-<div class="row mb-5"></div>
-<div class="row mb-5"></div>
 <?php include 'footer.php'; ?>
